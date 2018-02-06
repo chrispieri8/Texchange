@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="texchange.Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/jquery-3.0.0.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark"">
+            <div class="navbar-header">
+                    <h4 style="color: white" class="navbar-text">Texchange</h4>
+                </div> 
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="Home.aspx">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact</a>
+    </li>
+  </ul>
+<ul class="nav navbar-nav navbar-right">
+                    <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="SignIn.aspx">Account</a>
+    </li>
+                  
+                   
+                </ul>
+</nav>
+        
+        
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
