@@ -10,23 +10,20 @@
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label>Name</label>
-                    <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
+                    <label>Title</label>
+                    <asp:TextBox ID="txtTitle" runat="server" CssClass="form-control"></asp:TextBox>
 
                     <label>Author</label>
-                    <asp:TextBox ID="txtDescription" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtAuthor" runat="server" CssClass="form-control"></asp:TextBox>
+
+                    <label>Coarse</label>
+                    <asp:TextBox ID="txtCoarse" runat="server" CssClass="form-control"></asp:TextBox>
+
+                    <label>Department</label>
+                    <asp:TextBox ID="txtDepartment" runat="server" CssClass="form-control"></asp:TextBox>
 
                     <label>Price</label>
                     <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control"></asp:TextBox>
-
-                    <label>Quantity</label>
-                    <asp:TextBox ID="txtQuantity" runat="server" CssClass="form-control"></asp:TextBox>
-
-                    <label>Department ID</label>
-                    <asp:TextBox ID="txtDepartmentID" runat="server" CssClass="form-control"></asp:TextBox>
-
-                    <label>Category ID</label>
-                    <asp:TextBox ID="txtCategoryID" runat="server" CssClass="form-control"></asp:TextBox>
 
                     <label>Product Image</label>
                     <asp:FileUpload ID="FileUploadImage" CssClass="form-control" runat="server" />
