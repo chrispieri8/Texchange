@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using texchange.DataModels;
 
 namespace texchange
 {
@@ -11,6 +12,30 @@ namespace texchange
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["thePost"] != null)
+            {
+                DataModels.CreatePost post = (DataModels.CreatePost)Session["thePost"];
+                txtTitle.Text = post.title;
+                txtAuthor.Text = post.author;
+                txtCoarse.Text = post.coarse;
+                txtDepartment.Text = post.department;
+                txtPrice.Text = post.price.ToString();
+            }
+        }
+
+        protected void btnSumbit_Click(object sender, EventArgs e)
+        {
+            DataModels.CreatePost post = new DataModels.CreatePost();
+
+            post.title = txtTitle.Text;
+            post.author = txtAuthor.Text;
+            post.coarse = txtCoarse.Text;
+            post.department = txtCoarse.Text;
+            post.price = float.Parse(txtPrice.Text);
+            //post.image = FileUploadImage.
+
+            Session["thePost"] = post;
+            Response.Redirect("CreatePostConfirm.aspx");
 
         }
     }

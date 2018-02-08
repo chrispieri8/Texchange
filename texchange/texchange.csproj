@@ -103,6 +103,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CreatePost.aspx" />
+    <Content Include="CreatePostConfirm.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -179,6 +180,14 @@
     <Compile Include="CreatePost.aspx.designer.cs">
       <DependentUpon>CreatePost.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CreatePostConfirm.aspx.cs">
+      <DependentUpon>CreatePostConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePostConfirm.aspx.designer.cs">
+      <DependentUpon>CreatePostConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\CreatePost.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
