@@ -5,40 +5,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <script src="scripts/bootstrap.js"></script>
     <script src="scripts/jquery-3.0.0.js"></script>
+    <script src="scripts/bootstrap.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="StyleSheet1.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+
+    <script>
+    $(document).ready(function () {
+        var url = window.location;
+        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+        $('ul.nav a').filter(function() {
+             return this.href == url;
+        }).parent().addClass('active');
+    });
+</script>
+    
     <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark"">
-            <div class="navbar-header">
-                    <h4 style="color: white" class="navbar-text">Texchange</h4>
-                </div> 
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="Home.aspx">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Contact</a>
-    </li>
-  </ul>
-<ul class="nav navbar-nav navbar-right">
-                    <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="SignIn.aspx">Account</a>
-    </li>
-                  
-                   
-                </ul>
+
+<nav class="navbar navbar-expand-md fixed-top navbar-light">
+  <div class="container">
+  <!-- Brand -->
+  <a class="navbar-brand" href="Home.aspx">TEXCHANGE</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="Search.aspx">SEARCH FOR BOOK</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="CreatePost.aspx">SELL A BOOK</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.aspx">ABOUT</a>
+      </li> 
+        <li class="nav-item">
+        <a class="nav-link" href="SignIn.aspx">MY ACCOUNT</a>
+      </li> 
+    </ul>
+  </div> 
+  </div>
 </nav>
-        
+
+     <div class="container">
+      
+<div class="footer" id="foot">
+    <p>© 2018 Copyright </p>
+    
+        </div>
+</div>
         
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

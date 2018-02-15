@@ -2,29 +2,42 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1>Welcome to Texchange</h1>      
+    <div class="jumbotron" id="jumbo" >
+        <div class="container">
+        <div class="row">
+        <div class="col-sm-6" style="text-align:center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+    <h2>Welcome to Texchange</h2>      
     <p>Buy and sell textbooks for better prices than the bookstore.</p>
+      <a href="about.aspx" class="btn btn-outline-primary">Learn More</a>
+    </div>
+    </div>
   </div>
-</div>
+        </div>
 
-    <div class="container">
+    <div class="container" style="text-align:center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+        <h2 style="margin:20px;font-size:250%">Getting Started</h2>
     <div class="row">
-        <div class="col-sm-6" style="text-align:center">
-            <h2>Search for Book</h2>
+        <div class="col-sm-4">
+            <i class="fa fa-search" aria-hidden="true" id="icon"></i>
+            <h2>Search for Textbook</h2>
             <p>Find someone selling the book you need</p>
             <a href="Search.aspx" class="btn btn-primary">Search</a>
         </div>
-        
+
+        <div class="col-sm-4">
+            <i class="fa fa-user" aria-hidden="true" id="icon"></i>
+            <h2>Create an Account</h2>
+            <p>Create an account to sell a book</p>
+            <a href="Search.aspx" class="btn btn-primary">Search</a>
+        </div>
       
-        <div class="col-sm-6" style="text-align:center">
-            <h2>Create a Post</h2>
+        <div class="col-sm-4">
+            <i class="fa fa-usd" aria-hidden="true" id="icon"></i>
+            <h2>Sell a Textbook</h2>
             <p>List your books for cash</p>
-            <a href="CreatePost.aspx" class="btn btn-primary">Create</a>
-            
+            <a href="CreatePost.aspx" class="btn btn-primary">Create</a>            
         </div>
     </div>
+        
         </div>
 </asp:Content>

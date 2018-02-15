@@ -2,13 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
+   
     <div class="container">
-        <div class="panel panel-success">
-            <div class="pandel-heading text-center">
+        <div class="card">
+            <div class="card-header text-center bg-light">
                 <h2>Customer Registration</h2>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
                 <div class="form-group">
                     <label>Username</label>
                     <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"></asp:TextBox>
