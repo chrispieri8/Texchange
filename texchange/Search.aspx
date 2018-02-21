@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
-     <div class="container">
+     <div class="container col-md-9 col-lg-8">
         <div class="card">
             <div class="card-header text-center">
                 <h2>Search for Book</h2>

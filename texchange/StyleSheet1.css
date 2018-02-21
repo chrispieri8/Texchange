@@ -50,19 +50,25 @@ html {
 #icon{
     font-size:65px;
     padding-bottom:15px;
+    
 }
 
 
 li a:hover{
-    border-bottom:2px solid orangered;
+    padding-bottom:1px;
+    border-bottom:2px solid cornflowerblue;
 }
 
+/*
 li a.active{
-    border-bottom:2px solid orangered;
+    bottom:0;
+    border-bottom:2px solid cornflowerblue;
 }
 
 
 nav .active{
-    border-bottom:2px solid orangered;
+    bottom:0;
+    border-bottom:2px solid cornflowerblue;
 }
 
+*/

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>TextChange</title>
     <script src="scripts/jquery-3.0.0.js"></script>
     <script src="scripts/bootstrap.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />
@@ -16,22 +16,13 @@
 </head>
 <body>
 
-    <script>
-    $(document).ready(function () {
-        var url = window.location;
-        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
-        $('ul.nav a').filter(function() {
-             return this.href == url;
-        }).parent().addClass('active');
-    });
-</script>
     
     <form id="form1" runat="server">
 
 <nav class="navbar navbar-expand-md fixed-top navbar-light">
   <div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="Home.aspx">TEXCHANGE</a>
+  <a class="navbar-brand" href="Home.aspx">TEXT<span style="color:royalblue">CHANGE</span></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -51,7 +42,7 @@
         <a class="nav-link" href="about.aspx">ABOUT</a>
       </li> 
         <li class="nav-item">
-        <a class="nav-link" href="SignIn.aspx">MY ACCOUNT</a>
+        <a class="nav-link" href="Login.aspx">MY ACCOUNT</a>
       </li> 
     </ul>
   </div> 
@@ -61,7 +52,7 @@
      <div class="container">
       
 <div class="footer" id="foot">
-    <p>© 2018 Copyright </p>
+    <p>2018 Copyright </p>
     
         </div>
 </div>

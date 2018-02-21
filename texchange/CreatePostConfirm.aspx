@@ -4,12 +4,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    <div class="container">
+    <div class="container col-md-9 col-lg-8">
         <div class="card">
             <div class="card-header text-center bg-success" style="color:white">
                 <h2>Create a Post Confirmation</h2>
             </div>
-            <br />
+            
 
             <div class="card-body">
                 <label class="col-md-3 col-lg-3">Title:</label>
@@ -38,8 +38,9 @@
 
 
                 <div class="form-group text-center">
+                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-success" OnClick="btnSubmit_Click"  />
                     <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-warning" OnClick="btnCancel_Click" />
-                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-success"  />
+                   
                 </div>
             </div>
         </div>

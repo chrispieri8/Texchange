@@ -3,29 +3,33 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
-    <div class="container">
+    <div class="container col-md-9 col-lg-8 ">
         <div class="card">
             <div class="card-header text-center bg-light">
                 <h2>Create a Post</h2>
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <label>Title</label>
+                    <label>Title:</label>
                     <asp:TextBox ID="txtTitle" runat="server" CssClass="form-control"></asp:TextBox>
 
-                    <label>Author</label>
+                    <label>Author:</label>
                     <asp:TextBox ID="txtAuthor" runat="server" CssClass="form-control"></asp:TextBox>
 
-                    <label>Course</label>
+                    <label>Course:</label>
                     <asp:TextBox ID="txtCoarse" runat="server" CssClass="form-control"></asp:TextBox>
 
-                    <label>Department</label>
+                    <label>Department:</label>
                     <asp:TextBox ID="txtDepartment" runat="server" CssClass="form-control"></asp:TextBox>
 
-                    <label>Price</label>
+                    <label>Price:</label>
                     <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control"></asp:TextBox>
 
-                    <label>Product Image</label>
+                    <label>Condition:</label>
+
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+
+                    <label>Product Image:</label>
                     <asp:FileUpload ID="FileUploadImage" CssClass="form-control" runat="server" />
                     
 
