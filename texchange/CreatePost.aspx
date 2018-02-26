@@ -17,7 +17,7 @@
                     <asp:TextBox ID="txtAuthor" runat="server" CssClass="form-control"></asp:TextBox>
 
                     <label>Course:</label>
-                    <asp:TextBox ID="txtCoarse" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtCourse" runat="server" CssClass="form-control"></asp:TextBox>
 
                     <label>Department:</label>
                     <asp:TextBox ID="txtDepartment" runat="server" CssClass="form-control"></asp:TextBox>

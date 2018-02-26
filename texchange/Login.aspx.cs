@@ -36,13 +36,15 @@ namespace texchange
                 Tuple<string,string> temp = ut.login(user);
                 if(ph.Verify(temp.Item1, temp.Item2, txtPassword.Text))
                 {
+                    user = ut.getInfo(user);
                     Session["User"] = user;
+                    Session["ID"] = user.userID;
                     Response.Redirect("MyAccount.aspx");
 
                 }
                 else
                 {
-                    Label1.Text = "incorrect password or email";              
+                    Label1.Text = "Incorrect password or email";
 
 
                 }
@@ -50,6 +52,7 @@ namespace texchange
             }
             catch (Exception ex)
             {
+                Label1.Text = "Incorrect password or email";
                 Console.WriteLine(ex.Message);
             }
 

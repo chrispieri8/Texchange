@@ -23,7 +23,7 @@
              <br />
 
              
-             <asp:Label ID="Label1" runat="server"></asp:Label>
+             <asp:Label ID="Label1" CssClass="text-danger" runat="server"></asp:Label>
              
 
 

@@ -129,6 +129,48 @@ namespace texchange.DataTiers
 
         }
 
+        public DataModels.Users getInfo(DataModels.Users user)
+        {
+
+            query = "SELECT * from users where username = '" + user.username + "' OR email = '" + user.email + "';";
+
+            conn = new MySqlConnection(connectionString);
+            cmd = new MySqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    DataModels.Users tempUser = new DataModels.Users();
+                    tempUser.userID = reader.GetInt32("userID");
+                    tempUser.email = reader.GetString("email");
+                    tempUser.username = reader.GetString("username");
+                    tempUser.major = reader.GetString("major");
+                    tempUser.salt = reader.GetString("salt");
+                    tempUser.hash = reader.GetString("hash");
+                    return tempUser;
+
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
     }
 }
 

@@ -15,33 +15,62 @@ namespace texchange.DataTiers
         public postTier() : base() { }
 
 
-        public void insertPost(DataModels.CreatePost post)
+        public void insertPost(DataModels.CreatePost post, int id)
         {
 
-            query = "INSERT INTO posts (title, author, course, department, price) " +
-                "VALUES ('" + post.title + "','" + post.author + "','" + post.course + "','" + post.department + "','" + post.price + "');";
+            query = "INSERT INTO posts (title, author, course, department, price, userID) " +
+                "VALUES ('" + post.title + "','" + post.author + "','" + post.course + "','" + post.department + "','" + post.price + "','" + id + "');";
 
             conn = new MySqlConnection(connectionString);
             cmd = new MySqlCommand(query, conn);
-            
-                try
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
 
-                }
-                catch (MySqlException ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-                finally
-                {
-                    conn.Close();
-                }
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
 
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
 
         }
 
+
+        public DataSet getPostDataSet()
+        {
+            DataSet ds;
+            MySqlConnection conn;
+            String query;
+            MySqlDataAdapter da;
+
+            query = "SELECT * FROM posts;";
+            conn = new MySqlConnection(connectionString);
+            da = new MySqlDataAdapter(query, conn);
+
+            ds = new DataSet();
+            try
+            {
+                da.Fill(ds, "posts");
+            }
+            catch (MySqlException e)
+            {
+                throw new Exception("Error with getting Produc DataSet", e);
+            }
+            finally
+            {
+                conn.Close();
+                da.Dispose();
+            }
+
+            return ds;
+        }
+
     }
 
+}

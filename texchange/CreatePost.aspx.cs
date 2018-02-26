@@ -23,10 +23,12 @@ namespace texchange
                 DataModels.CreatePost post = (DataModels.CreatePost)Session["thePost"];
                 txtTitle.Text = post.title;
                 txtAuthor.Text = post.author;
-                txtCoarse.Text = post.course;
+                txtCourse.Text = post.course;
                 txtDepartment.Text = post.department;
                 txtPrice.Text = post.price.ToString();
+                Session.Remove("thePost");
             }
+
         }
 
         protected void btnSumbit_Click(object sender, EventArgs e)
@@ -35,8 +37,8 @@ namespace texchange
 
             post.title = txtTitle.Text;
             post.author = txtAuthor.Text;
-            post.course = txtCoarse.Text;
-            post.department = txtCoarse.Text;
+            post.course = txtCourse.Text;
+            post.department = txtDepartment.Text;
             post.price = float.Parse(txtPrice.Text);
             //post.image = FileUploadImage.
 

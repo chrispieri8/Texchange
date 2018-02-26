@@ -15,12 +15,16 @@ namespace texchange
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["user"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             if(Session["thePost"] != null)
             {
                 DataModels.CreatePost post = (DataModels.CreatePost)Session["thePost"];
                 lblTitle.Text = post.title;
                 lblAuthor.Text = post.author;
-                lblCoarse.Text = post.course;
+                lblCourse.Text = post.course;
                 lblDepartment.Text = post.department;
                 lblPrice.Text = post.price.ToString();
                 
@@ -42,10 +46,14 @@ namespace texchange
                DataTiers.postTier pt = new DataTiers.postTier();
                DataModels.CreatePost post = (DataModels.CreatePost)Session["thePost"];
 
+            
+                DataModels.Users tempUser = (DataModels.Users)Session["user"];
+                int id = tempUser.userID;
 
-               try
+
+                try
                {
-                   pt.insertPost(post);
+                   pt.insertPost(post, id);
 
                }
                catch (Exception ex)
@@ -53,6 +61,7 @@ namespace texchange
                    Console.WriteLine(ex.Message);
                    Response.Redirect("createPost.aspx");
                }
+            Session.Remove("thePost");
             Response.Redirect("Success.aspx");
                
     /*
