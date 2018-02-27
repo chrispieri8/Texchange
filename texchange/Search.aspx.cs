@@ -13,5 +13,14 @@ namespace texchange
         {
 
         }
+        protected void btnSumbit_Click(object sender, EventArgs e)
+        {
+            DataModels.CreatePost cp = new DataModels.CreatePost();
+            cp.title = txtTitle.Text;
+            cp.author = txtAuthor.Text;
+            cp.department = txtDepartment.Text;
+
+            Session["search"] = cp;
+        }
     }
 }

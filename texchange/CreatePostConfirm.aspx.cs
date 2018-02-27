@@ -24,7 +24,7 @@ namespace texchange
                 DataModels.CreatePost post = (DataModels.CreatePost)Session["thePost"];
                 lblTitle.Text = post.title;
                 lblAuthor.Text = post.author;
-                lblCourse.Text = post.course;
+                lblCondition.Text = post.condition;
                 lblDepartment.Text = post.department;
                 lblPrice.Text = post.price.ToString();
                 

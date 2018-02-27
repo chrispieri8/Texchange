@@ -18,8 +18,8 @@ namespace texchange.DataTiers
         public void insertPost(DataModels.CreatePost post, int id)
         {
 
-            query = "INSERT INTO posts (title, author, course, department, price, userID) " +
-                "VALUES ('" + post.title + "','" + post.author + "','" + post.course + "','" + post.department + "','" + post.price + "','" + id + "');";
+            query = "INSERT INTO posts (Title, Author, Condition, Department, Price, userID) " +
+                "VALUES ('" + post.title + "','" + post.author + "','" + post.condition + "','" + post.department + "','" + post.price + "','" + id + "');";
 
             conn = new MySqlConnection(connectionString);
             cmd = new MySqlCommand(query, conn);

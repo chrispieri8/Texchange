@@ -31,13 +31,13 @@ namespace texchange {
         protected global::System.Web.UI.WebControls.Label lblAuthor;
         
         /// <summary>
-        /// lblCourse control.
+        /// lblCondition control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCourse;
+        protected global::System.Web.UI.WebControls.Label lblCondition;
         
         /// <summary>
         /// lblDepartment control.

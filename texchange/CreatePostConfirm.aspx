@@ -20,8 +20,8 @@
                 <asp:Label ID="lblAuthor" runat="server" Text="" CssClass="col-md-3 col-lg-3"></asp:Label>
                 <div class="clearfix"></div>
 
-                <label class="col-md-3 col-lg-3">Course:</label>
-                <asp:Label ID="lblCourse" runat="server" Text="" CssClass="col-md-3 col-lg-3"></asp:Label>
+                <label class="col-md-3 col-lg-3">Condition:</label>
+                <asp:Label ID="lblCondition" runat="server" Text="" CssClass="col-md-3 col-lg-3"></asp:Label>
                 <div class="clearfix"></div>
 
                 <label class="col-md-3 col-lg-3">Department:</label>

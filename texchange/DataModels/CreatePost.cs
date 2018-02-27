@@ -10,7 +10,7 @@ namespace texchange.DataModels
     {
         public string title { get; set; }
         public string author { get; set; }
-        public string course { get; set; }
+        public string condition { get; set; }
         public string department { get; set; }
         public float price { get; set; }
         public string image { get; set; }

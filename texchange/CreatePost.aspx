@@ -16,18 +16,23 @@
                     <label>Author:</label>
                     <asp:TextBox ID="txtAuthor" runat="server" CssClass="form-control"></asp:TextBox>
 
-                    <label>Course:</label>
-                    <asp:TextBox ID="txtCourse" runat="server" CssClass="form-control"></asp:TextBox>
+                    <label>Condition:</label>
+                    <asp:DropDownList ID="DropDownCondition" runat="server" CssClass="form-control" >
+                        <asp:ListItem Text="Like New"></asp:ListItem>
+                        <asp:ListItem Text="Very Good"></asp:ListItem>
+                        <asp:ListItem Text="Good"></asp:ListItem>
+                        <asp:ListItem Text="Fair"></asp:ListItem>
+                        <asp:ListItem Text="Poor"></asp:ListItem>
+                    </asp:DropDownList>
 
                     <label>Department:</label>
                     <asp:TextBox ID="txtDepartment" runat="server" CssClass="form-control"></asp:TextBox>
+                    
 
                     <label>Price:</label>
                     <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control"></asp:TextBox>
 
-                    <label>Condition:</label>
-
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                   
 
                     <label>Product Image:</label>
                     <asp:FileUpload ID="FileUploadImage" CssClass="form-control" runat="server" />

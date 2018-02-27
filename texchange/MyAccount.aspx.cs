@@ -41,7 +41,7 @@ namespace texchange
             using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyData"].ToString()))
             {
                 // write the sql statement to execute    
-                string query = "SELECT posts.postID, posts.title, posts.author, posts.department, posts.course, posts.price FROM posts where posts.userID = '" + tempUser.userID + "'";
+                string query = "SELECT posts.PostID, posts.Title, posts.Author, posts.Department, posts.Condition, posts.Price FROM posts where posts.userID = '" + tempUser.userID + "'";
                 // instantiate the command object to fire    
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -63,7 +63,7 @@ namespace texchange
     protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             GridViewRow row = (GridViewRow)GridView1.Rows[e.RowIndex];
-            MySqlCommand cmd = new MySqlCommand("Delete From posts where postID = '" + e.Values[0] + "'", conn);
+            MySqlCommand cmd = new MySqlCommand("Delete From posts where PostID = '" + e.Values[0] + "'", conn);
             conn.Open();
             cmd.ExecuteNonQuery();
             GetData();
@@ -79,10 +79,10 @@ namespace texchange
         {
             GridView1.EditIndex = e.NewEditIndex;
             
-            //GridView1.Rows[e.NewEditIndex].Cells[2].Enabled = false;
 
             GetData();
-            GridView1.Rows[e.NewEditIndex].Cells[2].Enabled = false;
+            GridView1.Rows[e.NewEditIndex].Cells[1].Enabled = false;
+
         }
 
         protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
@@ -104,9 +104,8 @@ namespace texchange
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             DataModels.Users tempUser = (DataModels.Users)Session["user"];
-            //GridView1.Rows[e.RowIndex].Cells[2].Enabled = false;
 
-            MySqlCommand cmd = new MySqlCommand("Update posts set title = '" + e.NewValues[1] + "', author = '" + e.NewValues[2] + "', department = '" + e.NewValues[3] + "', course = '" + e.NewValues[4] + "', price = '" + float.Parse(e.NewValues[5].ToString()) + "' where posts.postID = '" + e.NewValues[0] + "'", conn);
+            MySqlCommand cmd = new MySqlCommand("Update posts set Title = '" + e.NewValues[1] + "', Author = '" + e.NewValues[2] + "', Department = '" + e.NewValues[3] + "', posts.Condition = '" + e.NewValues[4] + "', Price = '" + float.Parse(e.NewValues[5].ToString()) + "' where posts.postID = '" + e.NewValues[0] + "'", conn);
 
             conn.Open();
             cmd.ExecuteNonQuery();

@@ -23,7 +23,7 @@ namespace texchange
                 DataModels.CreatePost post = (DataModels.CreatePost)Session["thePost"];
                 txtTitle.Text = post.title;
                 txtAuthor.Text = post.author;
-                txtCourse.Text = post.course;
+                DropDownCondition.Text = post.condition;
                 txtDepartment.Text = post.department;
                 txtPrice.Text = post.price.ToString();
                 Session.Remove("thePost");
@@ -37,7 +37,7 @@ namespace texchange
 
             post.title = txtTitle.Text;
             post.author = txtAuthor.Text;
-            post.course = txtCourse.Text;
+            post.condition = DropDownCondition.Text;
             post.department = txtDepartment.Text;
             post.price = float.Parse(txtPrice.Text);
             //post.image = FileUploadImage.

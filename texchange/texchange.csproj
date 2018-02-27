@@ -158,6 +158,13 @@
     <Compile Include="MyAccount.aspx.designer.cs">
       <DependentUpon>MyAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SearchResult.aspx.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResult.aspx.designer.cs">
+      <DependentUpon>SearchResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Success.aspx.cs">
       <DependentUpon>Success.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -235,6 +242,7 @@
     <Content Include="scripts\umd\popper.min.js" />
     <Content Include="Search.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="SearchResult.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Success.aspx" />
     <Content Include="Web.config" />
