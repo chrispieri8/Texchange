@@ -21,6 +21,7 @@ namespace texchange
             cp.department = txtDepartment.Text;
 
             Session["search"] = cp;
+            Response.Redirect("SearchResult.aspx");
         }
     }
 }

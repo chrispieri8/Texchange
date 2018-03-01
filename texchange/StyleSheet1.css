@@ -24,11 +24,11 @@ html {
 
 .card{
     margin-top:25px;
-    top: -693px;
-    left: 58px;
-    height: 213px;
-    width: 1295px;
+    
 }
+
+#gettingStarted { width:100%; text-align:center; border-bottom: 1px solid #808080; line-height:0.1em; margin:10px 0 20px; } 
+#gettingStarted span { background:#fff; padding:0 10px; }
 
 .footer{
     position: absolute;
@@ -51,6 +51,7 @@ html {
 
 
 
+
 #icon{
     font-size:65px;
     padding-bottom:15px;
@@ -59,8 +60,9 @@ html {
 
 
 li a:hover{
-    padding-bottom:1px;
-    border-bottom:2px solid cornflowerblue;
+    
+    border-bottom:2px solid #4285F4;
+    bottom:0;
 }
 
 /*

@@ -15,7 +15,7 @@
         </div>
 
     <div class="container" style="text-align:center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
-        <h2 style="margin:20px">Getting Started</h2>
+        <h2 id="gettingStarted" style="margin-bottom:35px"><span>Getting Started</span> </h2>
     <div class="row">
         <div class="col-sm-4" style="padding-bottom:15px">
             <i class="fa fa-search" aria-hidden="true" id="icon"></i>
@@ -28,7 +28,7 @@
             <i class="fa fa-user" aria-hidden="true" id="icon"></i>
             <h2>Create an Account</h2>
             <p>Create an account to sell a book</p>
-            <a href="Search.aspx" class="btn btn-primary">Create</a>
+            <a href="Login.aspx" class="btn btn-primary">Create</a>
         </div>
       
         <div class="col-sm-4">

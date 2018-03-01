@@ -31,7 +31,7 @@ namespace texchange
             using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyData"].ToString()))
             {
                 // write the sql statement to execute    
-                string query = "SELECT posts.Title, posts.Author, posts.Department, posts.Condition, posts.Price, users.email, users.username FROM morty.posts, morty.users where posts.Title = '" + tempSearch.title + "' OR posts.Author = '" + tempSearch.author + "' Or posts.Department = '" + tempSearch.department + "'";
+                string query = "SELECT posts.Title, posts.Author, posts.Department, posts.Condition, posts.Price, users.email, users.username, users.major FROM morty.posts inner join morty.users on users.userID = posts.userID  where posts.Title = '" + tempSearch.title + "' OR posts.Author = '" + tempSearch.author + "' Or posts.Department = '" + tempSearch.department + "'";
 
                 // instantiate the command object to fire    
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))

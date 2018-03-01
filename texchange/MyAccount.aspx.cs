@@ -19,12 +19,14 @@ namespace texchange
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
             DataModels.Users tempUser = (DataModels.Users)Session["user"];
             lblUsername.Text = tempUser.username;
             lblEmail.Text = tempUser.email;
             lblMajor.Text = tempUser.major;
 
-            
+           
 
             if (!IsPostBack)
             {
