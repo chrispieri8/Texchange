@@ -19,10 +19,10 @@
     
     <form id="form1" runat="server">
 
-<nav class="navbar navbar-expand-md fixed-top navbar-light">
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" id="menu">
   <div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="Home.aspx">TEXT<span class="text-primary">CHANGE</span></a>
+  <a class="navbar-brand" href="default2.aspx">TEXT<span class="text-primary">CHANGE</span></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -31,10 +31,13 @@
 
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <div class=" input-group mx-auto" style="width:60%" id="navSearch">
+    <asp:TextBox ID="TxtPost" runat="server" placeholder="Title, Author, ISBN..." CssClass="form-control"  ></asp:TextBox>
+    <span class="input-group-append">
+        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" OnClick="Button1_Click" Text="Search" />
+      </span>
+            </div>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="Search.aspx">SEARCH FOR BOOK</a>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="CreatePost.aspx">SELL A BOOK</a>
       </li>

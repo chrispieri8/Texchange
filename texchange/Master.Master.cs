@@ -13,5 +13,19 @@ namespace texchange
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session["theSearch"] = TxtPost.Text.ToString();
+            string path = HttpContext.Current.Request.Url.AbsolutePath;
+
+            if(path != "/google.aspx")
+            {
+                Response.Redirect("google.aspx");
+
+            }
+
+
+        }
     }
 }
