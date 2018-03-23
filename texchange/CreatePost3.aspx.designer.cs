@@ -10,25 +10,70 @@
 namespace texchange {
     
     
-    public partial class CreatePost {
+    public partial class CreatePost3 {
         
         /// <summary>
-        /// txtTitle control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitle;
+        protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// txtAuthor control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAuthor;
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
+        /// lblDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDescription;
+        
+        /// <summary>
+        /// lblReview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblReview;
+        
+        /// <summary>
+        /// lblContact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblContact;
         
         /// <summary>
         /// DropDownCondition control.
@@ -40,15 +85,6 @@ namespace texchange {
         protected global::System.Web.UI.WebControls.DropDownList DropDownCondition;
         
         /// <summary>
-        /// txtDepartment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDepartment;
-        
-        /// <summary>
         /// txtPrice control.
         /// </summary>
         /// <remarks>
@@ -58,13 +94,13 @@ namespace texchange {
         protected global::System.Web.UI.WebControls.TextBox txtPrice;
         
         /// <summary>
-        /// FileUploadImage control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUploadImage;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
         
         /// <summary>
         /// btnSumbit control.

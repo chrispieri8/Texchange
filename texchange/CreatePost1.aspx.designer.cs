@@ -10,42 +10,33 @@
 namespace texchange {
     
     
-    public partial class Search {
+    public partial class CreatePost1 {
         
         /// <summary>
-        /// txtTitle control.
+        /// Panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitle;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// txtAuthor control.
+        /// TxtPost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAuthor;
+        protected global::System.Web.UI.WebControls.TextBox TxtPost;
         
         /// <summary>
-        /// txtDepartment control.
+        /// LinkButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDepartment;
-        
-        /// <summary>
-        /// btnSumbit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSumbit;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
     }
 }

@@ -11,7 +11,7 @@
         <br />
        
          <div class="card-body">
-             
+             <asp:Panel ID="Panel1" runat="server" DefaultButton="btnSignIn">
                 <label>Username or Email:</label>
                 <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control"> </asp:TextBox>
                 <div class="clearfix"></div>
@@ -31,6 +31,7 @@
              <asp:Button ID="btnSignIn" runat="server" Text="Sign In" CssClass="btn btn-primary" OnClick="btnSignIn_Click" />
              <a href="Register.aspx" class="btn btn-info">Register</a>
              </div>
+                 </asp:Panel>
              </div>
          </div>
     </div>

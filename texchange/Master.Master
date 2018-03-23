@@ -18,11 +18,12 @@
 
     
     <form id="form1" runat="server">
+      <asp:Panel ID="Panel1" runat="server" DefaultButton="LinkButton1">
 
-<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" id="menu">
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark text-center" id="menu">
   <div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="default2.aspx">TEXT<span class="text-primary">CHANGE</span></a>
+  <a class="navbar-brand" href="default.aspx">TEXT<span class="text-primary">CHANGE</span></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -31,15 +32,16 @@
 
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <div class=" input-group mx-auto" style="width:60%" id="navSearch">
+      <div class=" input-group col-md-6"  id="navSearch">
     <asp:TextBox ID="TxtPost" runat="server" placeholder="Title, Author, ISBN..." CssClass="form-control"  ></asp:TextBox>
     <span class="input-group-append">
-        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" OnClick="Button1_Click" Text="Search" />
+        <asp:LinkButton ID="LinkButton1" CssClass="btn btn-light" OnClick="LinkButton1_Click" runat="server"><i class="fa fa-search" aria-hidden="true"></i></asp:LinkButton>
       </span>
             </div>
+
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="CreatePost.aspx">SELL A BOOK</a>
+        <a class="nav-link" href="CreatePost1.aspx">SELL A BOOK</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="about.aspx">ABOUT</a>
@@ -51,7 +53,7 @@
   </div> 
   </div>
 </nav>
-
+</asp:Panel>
      <div class="container">
       
 <div class="footer" id="foot">

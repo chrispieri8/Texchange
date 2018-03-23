@@ -14,18 +14,25 @@ namespace texchange
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        
+        protected void LinkButton1_Click(object sender, EventArgs e)
         {
+            if (Session["theSearch"] != null)
+            {
+                Session.Remove("theSearch");
+            }
             Session["theSearch"] = TxtPost.Text.ToString();
             string path = HttpContext.Current.Request.Url.AbsolutePath;
 
-            if(path != "/google.aspx")
+            if (path != "/google.aspx" && TxtPost.Text != "")
             {
                 Response.Redirect("google.aspx");
 
             }
-
-
+            else
+            {
+                Server.TransferRequest(Request.Url.AbsolutePath, false);
+            }
         }
     }
 }

@@ -181,15 +181,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreatePost1.aspx.cs">
+      <DependentUpon>CreatePost1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePost1.aspx.designer.cs">
+      <DependentUpon>CreatePost1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePost2.aspx.cs">
+      <DependentUpon>CreatePost2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePost2.aspx.designer.cs">
+      <DependentUpon>CreatePost2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePost3.aspx.cs">
+      <DependentUpon>CreatePost3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePost3.aspx.designer.cs">
+      <DependentUpon>CreatePost3.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataModels\Users.cs" />
     <Compile Include="DataTiers\passwordHash.cs" />
     <Compile Include="DataTiers\userTier.cs" />
-    <Compile Include="default2.aspx.cs">
-      <DependentUpon>default2.aspx</DependentUpon>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="default2.aspx.designer.cs">
-      <DependentUpon>default2.aspx</DependentUpon>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="google.aspx.cs">
       <DependentUpon>google.aspx</DependentUpon>
@@ -212,13 +233,6 @@
     <Compile Include="SearchResult.aspx.designer.cs">
       <DependentUpon>SearchResult.aspx</DependentUpon>
     </Compile>
-    <Compile Include="searchResult2.aspx.cs">
-      <DependentUpon>searchResult2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="searchResult2.aspx.designer.cs">
-      <DependentUpon>searchResult2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Success.aspx.cs">
       <DependentUpon>Success.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -233,9 +247,11 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="CreatePost.aspx" />
+    <Content Include="CreatePost1.aspx" />
+    <Content Include="CreatePost2.aspx" />
+    <Content Include="CreatePost3.aspx" />
     <Content Include="CreatePostConfirm.aspx" />
-    <Content Include="default2.aspx" />
+    <Content Include="default.aspx" />
     <Content Include="defaultCSS.css" />
     <Content Include="google.aspx" />
     <Content Include="MyAccount.aspx" />
@@ -276,7 +292,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="default.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\esm\popper-utils.js" />
@@ -301,10 +316,8 @@
     <Content Include="scripts\umd\popper-utils.min.js" />
     <Content Include="scripts\umd\popper.js" />
     <Content Include="scripts\umd\popper.min.js" />
-    <Content Include="Search.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="SearchResult.aspx" />
-    <Content Include="searchResult2.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Success.aspx" />
     <Content Include="Web.config" />
@@ -326,13 +339,6 @@
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreatePost.aspx.cs">
-      <DependentUpon>CreatePost.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CreatePost.aspx.designer.cs">
-      <DependentUpon>CreatePost.aspx</DependentUpon>
-    </Compile>
     <Compile Include="CreatePostConfirm.aspx.cs">
       <DependentUpon>CreatePostConfirm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -342,13 +348,6 @@
     </Compile>
     <Compile Include="DataModels\CreatePost.cs" />
     <Compile Include="DataTiers\postTier.cs" />
-    <Compile Include="default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -364,13 +363,6 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Search.aspx.cs">
-      <DependentUpon>Search.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Search.aspx.designer.cs">
-      <DependentUpon>Search.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -385,7 +377,9 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

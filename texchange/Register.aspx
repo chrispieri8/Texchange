@@ -23,6 +23,8 @@
             <div class="card-header text-center bg-light">
                 <h2>User Registration</h2>
             </div>
+                <asp:Panel ID="Panel1" runat="server" DefaultButton="btnSumbit">
+
             <div class="card-body" >
                 <div class="form-group">
                     <label>Username:</label>
@@ -45,11 +47,13 @@
                     <asp:TextBox ID="txtMajor" runat="server" CssClass="form-control"></asp:TextBox>
                    
                 </div>
+                    
                 </div>
                 
                 <div class="form-group text-center">
                     <asp:Button ID="btnSumbit" runat="server" Text="Submit" CssClass="btn btn-success" OnClick="btnSumbit_Click" />
                 </div>
+            </asp:Panel>
 
 
 

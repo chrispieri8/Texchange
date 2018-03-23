@@ -1,14 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="SearchResult.aspx.cs" Inherits="texchange.SearchResult" Async="true" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="CreatePost3.aspx.cs" Inherits="texchange.CreatePost3" Async="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <div class="container col-md-8">
-            <div class="card">
-                <div class="card-header text-center">
-                    <h2>Search Result</h2>
-                </div>
-                <div class="card-body">
-                    <h2>Textbook Information</h2>
+     <div class="container col-md-9 col-lg-9 ">
+        <div class="card">
+            <div class="card-header text-center bg-light text-primary">
+                <h1>Create Post</h1>
+            </div>
+            <div class="card-body">
+                <h2>2. Textbook Information</h2>
                 <hr />
                 <br />
                 <div class="d-inline-block col-12" >
@@ -42,39 +42,34 @@
 
                     </div>
                 <br />
+                <h2>3. Selling Information</h2>
+                <hr />
+                <br />
+                <div class="form-group d-inline-block">
+                    <div>
+                    <label class="pr-3">Condition:</label>
+                    <asp:DropDownList ID="DropDownCondition" runat="server" CssClass="form-control" >
+                        <asp:ListItem Text="Like New"></asp:ListItem>
+                        <asp:ListItem Text="Very Good"></asp:ListItem>
+                        <asp:ListItem Text="Good"></asp:ListItem>
+                        <asp:ListItem Text="Fair"></asp:ListItem>
+                        <asp:ListItem Text="Poor"></asp:ListItem>
+                    </asp:DropDownList>
+                        </div>
                     <br />
-                
-                    <h2>Seller Information</h2>
-                    <hr />
-                    <asp:Label ID="Label4" runat="server" Text="Nobody is selling this book" Visible="false" CssClass="text-muted text-center"></asp:Label>
-                    
-                    <asp:GridView CssClass="table table-bordered" ID="GridView1" AutoGenerateColumns="false" runat="server">
-                        <Columns>                          
-                           
-                            <asp:TemplateField>
-                                <ItemTemplate>
-                                    Username:
-                                    <asp:Label ID="lblUsername" runat="server" Text='<%# Bind("username") %>'></asp:Label>
-                                    <br />
-                                    Email:
-                                    <asp:Label ID="lblEmail" runat="server" Text='<%# Bind("email") %>'></asp:Label>
-                                    <br />
-                                    Major:
-                                    <asp:Label ID="lblMajor" runat="server" Text='<%# Bind("major") %>'></asp:Label>
-                                    <br />
-                                    Condition:<asp:Label ID="lblCondition" runat="server" Text='<%# Bind("Condition") %>'></asp:Label>
-                                    <br />
-                                    <asp:Label ID="lblPrice" runat="server" Text='<%# Bind("Price", "{0:C}") %>'></asp:Label>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                            
-                        </Columns>
-                        
-                    </asp:GridView>
-                    
-                    
-                    </div>
+                    <div>
+                    <label class="pr-3">Price:</label>
+                    <asp:TextBox ID="txtPrice" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
                 </div>
 
-                </div> 
+                <div class="form-group text-right">
+                    <asp:Button ID="btnCancel" runat="server" Text="Cancel"  CssClass="btn btn-warning" />
+                    <asp:Button ID="btnSumbit" runat="server" Text="Submit"  CssClass="btn btn-success" OnClick="btnSumbit_Click" />
+                </div>
+
+                <br />
+            </div>
+        </div>
+    </div>
 </asp:Content>

@@ -43,7 +43,7 @@ namespace texchange
             using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyData"].ToString()))
             {
                 // write the sql statement to execute    
-                string query = "SELECT posts.PostID, posts.Title, posts.Author, posts.Department, posts.Condition, posts.Price FROM posts where posts.userID = '" + tempUser.userID + "'";
+                string query = "SELECT posts.PostID, posts.Title, posts.Condition, posts.Price FROM posts where posts.userID = '" + tempUser.userID + "'";
                 // instantiate the command object to fire    
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
