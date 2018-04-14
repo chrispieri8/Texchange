@@ -12,7 +12,7 @@
                 <hr />
                 <br />
                 <asp:Panel ID="Panel1" runat="server" DefaultButton="LinkButton1">
-                <div class=" input-group mx-auto" style="width:100%">
+                <div class=" input-group col-10 mx-auto" style="width:100%">
                 <asp:TextBox ID="TxtPost" runat="server" placeholder="Title, Author, ISBN..." CssClass="form-control"  ></asp:TextBox>
                 <span class="input-group-append">
                 <asp:LinkButton ID="LinkButton1" CssClass="btn btn-light" OnClick="Button1_Click" runat="server"><i class="fa fa-search" aria-hidden="true"></i></asp:LinkButton>

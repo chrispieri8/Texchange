@@ -32,11 +32,22 @@ namespace texchange
 
                 dlSearch.DataBind();
 
-                if (Session["theSearch"] == null)
+                TextBox temp = (TextBox)Master.FindControl("TxtPost");
+                if (temp.Text == "")
+                {
+                    string text = (String)Session["theSearch"];
+                    await SearchTitle(text);
+                }
+                else
+                {
+                    await SearchTitle(temp.Text);
+                }
+
+             /*   if (Session["theSearch"] == null)
                 {
                     TextBox temp = (TextBox)Master.FindControl("TxtPost");
-                    string text = temp.Text;
-                    await SearchTitle(text);
+                    Session["theSearch"] = temp.Text;
+                    await SearchTitle(temp.Text);
 
                 }
                 else
@@ -46,7 +57,7 @@ namespace texchange
                     temp.Text = text;
                     await SearchTitle(text);
 
-                }
+                }*/
             }
         }
 

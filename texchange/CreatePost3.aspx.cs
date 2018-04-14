@@ -41,8 +41,7 @@ namespace texchange
                     Label3.Text = Label3.Text + result.SaleInfo.RetailPrice.Amount.ToString();
                 }
                 lblDescription.Text = result.VolumeInfo.Description;
-                lblReview.Text = result.VolumeInfo.AverageRating.ToString() + "(" + result.VolumeInfo.RatingsCount.ToString() + ")";
-                lblContact.Text = result.VolumeInfo.ContentVersion.ToString();
+                lblReview.Text = result.VolumeInfo.AverageRating.ToString() + "/5 (" + result.VolumeInfo.RatingsCount.ToString() + " Reviews)";
             }
             
 
@@ -76,13 +75,12 @@ namespace texchange
                 Console.WriteLine(ex.Message);
                 Response.Redirect("CreatePost3.aspx");
             }
-           Session.Remove("bookID");
+          Session.Remove("bookID");
             if (!Response.IsRequestBeingRedirected)
             {
                 Response.Redirect("Success.aspx");
             }
-            //Response.Redirect("Success.aspx");
-           //Server.Transfer("Success.aspx", true);
+            
 
         }
     }

@@ -7,13 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace texchange
 {
-    public partial class Master : System.Web.UI.MasterPage
+    public partial class Index : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            TxtPost.Focus();
         }
-
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
@@ -22,22 +21,12 @@ namespace texchange
                 Session.Remove("theSearch");
             }
             Session["theSearch"] = TxtPost.Text.ToString();
-            string path = HttpContext.Current.Request.Url.AbsolutePath;
-
-            if (path != "/google.aspx" && TxtPost.Text != "")
-            {
-                Response.Redirect("google.aspx");
-
-            } 
-            else
-            {
-                Server.TransferRequest(Request.Url.AbsolutePath, false);
-            }
+            Response.Redirect("google.aspx");
         }
 
-        protected void LinkButton2_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("about.aspx");
+            TxtPost.Focus();
         }
     }
 }

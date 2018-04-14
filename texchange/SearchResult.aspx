@@ -22,11 +22,9 @@
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Reviews</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-                    </li>
+                    
                     </ul>
                     <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -35,43 +33,57 @@
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <asp:Label ID="lblReview" runat="server" Text="By "></asp:Label>
                     </div>
-                     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                         <asp:Label ID="lblContact" runat="server" Text="By "></asp:Label>
-                     </div>
+                    
                     </div>
 
                     </div>
                 <br />
-                    <br />
                 
-                    <h2>Seller Information</h2>
+                    <h2 class="pt-3">Seller Information</h2>
                     <hr />
-                    <asp:Label ID="Label4" runat="server" Text="Nobody is selling this book" Visible="false" CssClass="text-muted text-center"></asp:Label>
-                    
-                    <asp:GridView CssClass="table table-bordered" ID="GridView1" AutoGenerateColumns="false" runat="server">
+                    <div class="text-center">
+                    <asp:Label ID="Label4" runat="server" Text="Nobody is selling this book" Visible="false" CssClass="text-muted"></asp:Label>
+                    </div>
+                    <div class="table-responsive">
+                    <asp:GridView CssClass="table table-bordered" ID="GridView1" AutoGenerateColumns="False" runat="server" ShowHeader="False">
                         <Columns>                          
                            
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    Username:
+                                    <b>Username:</b>
                                     <asp:Label ID="lblUsername" runat="server" Text='<%# Bind("username") %>'></asp:Label>
                                     <br />
-                                    Email:
+                                    <b>Email:</b>
                                     <asp:Label ID="lblEmail" runat="server" Text='<%# Bind("email") %>'></asp:Label>
                                     <br />
-                                    Major:
+                                    <b>Major:</b>
                                     <asp:Label ID="lblMajor" runat="server" Text='<%# Bind("major") %>'></asp:Label>
-                                    <br />
-                                    Condition:<asp:Label ID="lblCondition" runat="server" Text='<%# Bind("Condition") %>'></asp:Label>
-                                    <br />
-                                    <asp:Label ID="lblPrice" runat="server" Text='<%# Bind("Price", "{0:C}") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             
+                            <asp:TemplateField ItemStyle-Width="35%">
+                                <ItemTemplate>
+                                    <div id="SearchPrice" class="text-center">
+                                    <asp:Label ID="Label5" runat="server" CssClass="text-primary" Text='<%# Bind("Price", "{0:C}") %>'></asp:Label>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            
+                           <asp:TemplateField>
+                               <ItemTemplate>
+                                   <div >
+                                   <b>Condition:</b>
+                                    <asp:Label ID="lblCondition" runat="server" Text='<%# Bind("Condition") %>'></asp:Label>
+                                    </div>
+                               </ItemTemplate>
+                           </asp:TemplateField>
+
                         </Columns>
                         
+                            <AlternatingRowStyle CssClass="bg-light" />
+
                     </asp:GridView>
-                    
+                    </div>
                     
                     </div>
                 </div>

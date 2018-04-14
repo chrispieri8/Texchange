@@ -2,12 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container col-md-8 col-lg-8 ">
+    <div class="container col-9 ">
         <div class="card">
             <div class="card-header text-center bg-light text-primary">
                 <h1>Create Post</h1>
             </div>
-            <div class="card-body mx-auto text-center">
+            <div class="card-body mx-auto text-center col-12">
                  <asp:DataList ID="dlSearch"  runat="server" RepeatColumns="4" CellSpacing="4" CellPadding="6" OnItemCommand="dlSearch_ItemCommand" >
 
             <ItemTemplate>

@@ -43,14 +43,12 @@ namespace texchange
                     Label3.Text = Label3.Text + result.SaleInfo.RetailPrice.Amount.ToString();
                 }
                 lblDescription.Text = result.VolumeInfo.Description;
-                lblReview.Text = result.VolumeInfo.AverageRating.ToString() + "(" + result.VolumeInfo.RatingsCount.ToString() + ")";
-                lblContact.Text = result.VolumeInfo.ContentVersion.ToString();
+                lblReview.Text = result.VolumeInfo.AverageRating.ToString() + "/5 (" + result.VolumeInfo.RatingsCount.ToString() + " Reviews)";
                         
                 GetData();
                 if(GridView1.Rows.Count == 0)
                 {
                     Label4.Visible = true;
-                    Label4.Style.Add("text-align", "center");
                 }
             }
 
@@ -65,7 +63,7 @@ namespace texchange
             using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyData"].ToString()))
             {
                 // write the sql statement to execute    
-                string query = "SELECT posts.Condition, posts.Price, users.email, users.username, users.major FROM morty.posts inner join morty.users on users.userID = posts.userID  where posts.BookID = '" + text + "';";
+                string query = "SELECT posts.Condition, posts.Price, users.email, users.username, users.major FROM TextchangedDB.posts inner join TextchangedDB.users on users.userID = posts.userID  where posts.BookID = '" + text + "';";
 
                 // instantiate the command object to fire    
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))

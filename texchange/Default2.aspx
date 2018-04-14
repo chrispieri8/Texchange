@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="texchange.default2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Default2.aspx.cs" Inherits="texchange.default2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         body {padding-top:0}
@@ -55,8 +55,8 @@
       <br />     
         
         <div class=" text-center" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color:white">
-    <h1>Textchange</h1>    
-            <p>Exchange Textbooks </p>
+    <h1>Textbook Exchange For Hofstra</h1>    
+            <p>Find textbooks being sold by students around you </p>
             <asp:Panel ID="Panel1" runat="server" DefaultButton="LinkButton1">
     <div class=" input-group input-group-lg mx-auto col-md-8">
     <asp:TextBox ID="TxtPost" runat="server" placeholder="Title, Author, ISBN..." CssClass="form-control" ></asp:TextBox>
@@ -68,32 +68,35 @@
     </div>
     </div>
   </div>
-       <br />
 
     <div class="container" style="text-align:center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
-        <h1 id="gettingStarted"><span>Welcome to Texchange</span></h1>
-        <p>Buy and sell textbooks for better prices than you find at the bookstore</p>
-        <h1 id="gettingStarted" style="margin-bottom:35px"><span>Getting Started</span> </h1>
+        <div id="gettingStarted">
+        <h1><span>Welcome to Textchanged</span></h1>
+            </div>
+        <p class="col-11 text-center mx-auto">Textchanged is a textbook exchange website made by Hofstra students for Hofstra students. 
+            Are you tired of spending hundreds of dollars on textbooks at the start of each semester just to have them collect dust by the end?
+            Well worry no longer, you just found the solution! On Textchanged you can buy and sell textbooks directly with students for better prices than you find at the bookstore.</p>
+        <a id="ff" href="about.aspx" class="btn btn-outline-primary mx-auto">Learn More</a> 
+        <div id="gettingStarted">
+        <h1 ><span>Getting Started</span> </h1>
+            </div>
     <div class="row">
-        <div class="col-sm-4" style="padding-bottom:15px">
+        <div class="col-sm-4" style="padding-bottom:25px">
             <i class="fa fa-search" aria-hidden="true" id="icon"></i>
-            <h2>Search for Textbook</h2>
-            <p>Find someone selling the book you need</p>
-            <a href="Search.aspx" class="btn btn-primary">Search</a>
+            <h3 style="padding-bottom:5px">Search for Textbook</h3>
+            <a href="Search.aspx" class="btn btn-primary" style="width:80px">Search</a>
         </div>
 
-        <div class="col-sm-4" style="padding-bottom:15px">
+        <div class="col-sm-4" style="padding-bottom:25px">
             <i class="fa fa-user" aria-hidden="true" id="icon"></i>
-            <h2>Create an Account</h2>
-            <p>Create an account to sell a book</p>
-            <a href="Login.aspx" class="btn btn-primary">Create</a>
+            <h3 style="padding-bottom:5px">Create an Account</h3>
+            <a href="Login.aspx" class="btn btn-primary" style="width:80px">Create</a>
         </div>
       
         <div class="col-sm-4">
             <i class="fa fa-usd" aria-hidden="true" id="icon"></i>
-            <h2>Sell a Textbook</h2>
-            <p>List your books for cash</p>
-            <a id="ff" href="CreatePost.aspx" class="btn btn-primary">Sell</a>            
+            <h3 style="padding-bottom:5px">Sell a Textbook</h3>
+            <a id="ff" href="CreatePost.aspx" class="btn btn-primary" style="width:80px">Sell</a>            
         </div>
     </div>
         

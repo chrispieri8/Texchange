@@ -10,23 +10,35 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="StyleSheet1.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body onresize="myFunction()">
+
+    <script>
+    function myFunction() {
+    var w = window.outerWidth;
+    var h = window.outerHeight;
+    if(w < 233){
+        $('#title').css('', '60%');
+        document.getElementById(title)
+    }
+   // document.getElementById("demo").innerHTML = txt;
+    }
+</script>
 
     
     <form id="form1" runat="server">
       <asp:Panel ID="Panel1" runat="server" DefaultButton="LinkButton1">
 
-<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark text-center" id="menu">
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark" id="menu" role="navigation">
   <div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="default.aspx">TEXT<span class="text-primary">CHANGE</span></a>
+  <a id="title" class="navbar-brand" href="Index.aspx">TEXT<span class="text-primary">CHANGED</span></a>
 
   <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <button id="togglebutton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -54,12 +66,19 @@
   </div>
 </nav>
 </asp:Panel>
-     <div class="container">
+
+
+
+
       
 <div class="footer" id="foot">
-    <p>2018 Copyright </p>
-    
-        </div>
+    <div class="container text-center">
+    <div class=" custom-control-inline justify-content-center">
+    <p class=" pr-4 text-muted"> Ⓒ 2018 Copyright </p>
+    <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Contact</asp:LinkButton>
+    </div>
+    </div>
+
 </div>
         
     <div>

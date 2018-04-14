@@ -83,7 +83,10 @@ namespace texchange
             
 
             GetData();
-            GridView1.Rows[e.NewEditIndex].Cells[1].Enabled = false;
+           // GridView1.Rows[e.NewEditIndex].Cells[1].Visible = false;
+            GridView1.Rows[e.NewEditIndex].Cells[2].Enabled = false;
+            GridView1.Rows[e.NewEditIndex].Cells[3].Enabled = false;
+            GridView1.Rows[e.NewEditIndex].Cells[1].Text = "";
 
         }
 
@@ -107,10 +110,12 @@ namespace texchange
         {
             DataModels.Users tempUser = (DataModels.Users)Session["user"];
 
-            MySqlCommand cmd = new MySqlCommand("Update posts set Title = '" + e.NewValues[1] + "', Author = '" + e.NewValues[2] + "', Department = '" + e.NewValues[3] + "', posts.Condition = '" + e.NewValues[4] + "', Price = '" + float.Parse(e.NewValues[5].ToString()) + "' where posts.postID = '" + e.NewValues[0] + "'", conn);
+            MySqlCommand cmd = new MySqlCommand("Update posts set posts.Condition = '" + e.NewValues[2] + "', Price = '" + float.Parse(e.NewValues[3].ToString()) + "' where posts.postID = '" + e.NewValues[0] + "'", conn);
 
             conn.Open();
             cmd.ExecuteNonQuery();
+
+            GridView1.Rows[e.RowIndex].Cells[1].Visible = true;
 
             GridView1.EditIndex = -1;
             GetData();

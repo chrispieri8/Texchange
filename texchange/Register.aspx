@@ -17,6 +17,9 @@
 
        </div>
    </div>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
 
     <div class="container col-md-6 col-lg-6">
         <div class="card">
@@ -27,23 +30,23 @@
 
             <div class="card-body" >
                 <div class="form-group">
-                    <label>Username:</label>
+                    <label>Username<span style="color:red"> *</span></label>
                     <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"></asp:TextBox>
                 
-                    <label>Email:</label>
+                    <label>Email<span style="color:red"> *</span></label>
 
                    
                     <asp:TextBox ID="txtEmail" runat="server" CSSClass="form-control " ></asp:TextBox>
                     
 
-                    <label>Password:</label>
+                    <label>Password<span style="color:red"> *</span></label>
 
                     <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" CssClass="form-control "></asp:TextBox>
                     
-                    <label>Confirm Password:</label>
+                    <label>Confirm Password<span style="color:red"> *</span></label>
                     <asp:TextBox ID="txtPassword2" TextMode="Password" runat="server" CssClass="form-control "></asp:TextBox>
                     
-                    <label>Major:</label>
+                    <label>Major</label>
                     <asp:TextBox ID="txtMajor" runat="server" CssClass="form-control"></asp:TextBox>
                    
                 </div>
